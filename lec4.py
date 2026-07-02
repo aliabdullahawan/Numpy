@@ -14,5 +14,9 @@ print(data_ceil)
 
 print(np.pi)
 
+data_area = np.pi * (data ** 2)
+print(data_area)
 
+data_curcumfarance = 2 * np.pi * data
+print(data_curcumfarance)
 
