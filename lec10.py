@@ -23,6 +23,7 @@ print(data[~(data % 7 == 0)])
 # sigmoid function -- Wee created a function to calculate the sigmoid of the data array. 
 # The sigmoid function is defined as 1 / (1 + exp(-x)), where exp is the exponential function. 
 # This function is commonly used in machine learning and statistics for transforming values into a range between 0 and 1.
+# sigmoid = 1 / (1 + np.exp(-x))
 
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
@@ -34,10 +35,11 @@ print(data_sigmoid)
 # Mean Square Error (MSE) is a common metric used to evaluate the performance of regression models. 
 # It measures the average squared difference between the predicted values and the actual values. 
 # A lower MSE indicates a better fit of the model to the data.
+# mse = np.mean((actual - predicted) ** 2)
 
-actual = np.random.randint(satrt=1, stop=50, size=25)
+actual = np.random.randint(low=1, high=50, size=25)
 print(actual)
-predicted = np.random.randint(satrt=1, stop=50, size=25)
+predicted = np.random.randint(low=1, high=50, size=25)
 print(predicted)
 
 def mean_square_error(actual, predicted):
@@ -47,6 +49,18 @@ mse = mean_square_error(actual, predicted)
 print(mse)
 
 
+## -- Binary Cross Entropy (BCE) Calculation --
+# Binary Cross Entropy (BCE) is a loss function commonly used in binary classification problems. 
+# It measures the difference between the predicted probabilities and the actual binary labels.
+# log loss = -1/n * sum(y * log(p) + (1 - y) * log(1 - p)), where n is the number of samples, y is the actual label (0 or 1), 
+# and p is the predicted probability of the positive class.
 
+def binary_cross_entropy(actual, predicted):
+    epsilon = 1e-15  # Small value to avoid log(0)
+    predicted = np.clip(predicted, epsilon, 1 - epsilon)  # Clip predictions to avoid log(0)
+    return -np.mean(actual * np.log(predicted) + (1 - actual) * np.log(1 - predicted))
+
+bce = binary_cross_entropy(actual, predicted)
+print(bce)
 
 
