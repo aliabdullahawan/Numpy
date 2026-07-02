@@ -26,6 +26,6 @@ print(data_avg)
 data_summOFColumns = np.sum(data, axis=0)
 print(data_summOFColumns)
 data_SumOfRows = np.sum(data, axis=1)
-priint(data_SumOfRows)
+print(data_SumOfRows)
 
 
