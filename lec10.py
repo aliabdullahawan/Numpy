@@ -63,4 +63,28 @@ def binary_cross_entropy(actual, predicted):
 bce = binary_cross_entropy(actual, predicted)
 print(bce)
 
+# Vertical and Horizontal Stacking of Arrays
+# Vertical stacking (vstack) and horizontal stacking (hstack) are methods to combine arrays in NumPy.
+# Vertical stacking combines arrays along the vertical axis (rows), while horizontal stacking combines arrays along the horizontal axis (columns).
+
+data1 = np.arange(24).reshape(6, 4)
+data2 = np.arange(24, 48).reshape(6, 4)
+
+data_vstack = np.vstack((data1, data2))
+print(data_vstack)
+data_hstack = np.hstack((data1, data2))
+print(data_hstack)
+
+# Vertical and Horizontal Splitting of Arrays
+# Vertical splitting (vsplit) and horizontal splitting (hsplit) are methods to divide arrays
+# into smaller sub-arrays in NumPy. Vertical splitting divides an array into multiple sub-arrays along the vertical axis (rows),
+# while horizontal splitting divides an array into multiple sub-arrays along the horizontal axis (columns).
+
+data1 = np.arange(24).reshape(6, 4)
+data2 = np.arange(24, 48).reshape(6, 4)
+
+data_vsplit = np.vsplit(data1, 3)
+print(data_vsplit)
+data_hsplit = np.hsplit(data1, 2)
+print(data_hsplit)
 

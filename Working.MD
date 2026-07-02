@@ -1,6 +1,6 @@
 # NumPy Study Hub
 
-This folder is a compact NumPy learning path. The lecture files build from basic array creation to slicing, vectorized math, broadcasting, statistics, filtering, random data, and small machine-learning style helpers.
+This folder is a compact NumPy learning path. The lecture files build from basic array creation to slicing, vectorized math, broadcasting, statistics, filtering, random data, array manipulation tricks, and small machine-learning style helpers.
 
 ## Start Here
 
@@ -12,18 +12,19 @@ This folder is a compact NumPy learning path. The lecture files build from basic
 
 ## What Each Lecture Covers
 
-| File       | Main Topic                                                                                                                                     |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `lec1.py`  | NumPy basics, version check, arrays, `dtype`, `shape`, `ndim`, reshaping, and indexing into 3D data.                                           |
-| `lec2.py`  | Slicing and subscript-based selection across rows and columns.                                                                                 |
-| `lec3.py`  | Elementwise arithmetic on arrays.                                                                                                              |
-| `lec4.py`  | Mathematical functions like `sqrt`, `round`, `floor`, `ceil`, trig, logs, `exp`, and using `pi`.                                               |
-| `lec5.py`  | Elementwise operations, comparisons, and in-place masking with boolean conditions.                                                             |
-| `lec6.py`  | Broadcasting rules and how NumPy combines arrays of compatible shapes.                                                                         |
-| `lec7.py`  | Reductions and summary statistics such as `sum`, `mean`, `median`, `std`, `var`, `min`, `max`, `argmin`, `argmax`, and axis-based aggregation. |
-| `lec8.py`  | Filtering, boolean indexing, `np.where`, even/odd checks, logical negation, and handling missing values with `NaN`.                            |
-| `lec9.py`  | Random number generation with `default_rng`, random integers/floats, sampling, shuffling, permutations, and common distributions.              |
-| `lec10.py` | Fancy indexing, vectorized helper functions, sigmoid, mean squared error, and binary cross entropy.                                            |
+| File        | Main Topic                                                                                                                                                                                     |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `lec1.py`   | NumPy basics, version check, arrays, `dtype`, `shape`, `ndim`, reshaping, and indexing into 3D data.                                                                                           |
+| `lec2.py`   | Slicing and subscript-based selection across rows and columns.                                                                                                                                 |
+| `lec3.py`   | Elementwise arithmetic on arrays.                                                                                                                                                              |
+| `lec4.py`   | Mathematical functions like `sqrt`, `round`, `floor`, `ceil`, trig, logs, `exp`, and using `pi`.                                                                                               |
+| `lec5.py`   | Elementwise operations, comparisons, and in-place masking with boolean conditions.                                                                                                             |
+| `lec6.py`   | Broadcasting rules and how NumPy combines arrays of compatible shapes.                                                                                                                         |
+| `lec7.py`   | Reductions and summary statistics such as `sum`, `mean`, `median`, `std`, `var`, `min`, `max`, `argmin`, `argmax`, and axis-based aggregation.                                                 |
+| `lec8.py`   | Filtering, boolean indexing, `np.where`, even/odd checks, logical negation, and handling missing values with `NaN`.                                                                            |
+| `lec9.py`   | Random number generation with `default_rng`, random integers/floats, sampling, shuffling, permutations, and common distributions.                                                              |
+| `lec10.py`  | Fancy indexing, boolean filtering recap, sigmoid, mean squared error, binary cross entropy, stacking, and splitting.                                                                           |
+| `tricks.py` | Sorting, appending, concatenation, uniqueness, dimension expansion, cumulative sums, percentiles, histograms, correlation, covariance, membership checks, flips, clipping, and set operations. |
 
 ## Core Ideas In One Place
 
@@ -91,6 +92,17 @@ The final lecture uses NumPy to build reusable numeric helpers such as:
 - mean squared error
 - binary cross entropy
 
+### 9) Array Tricks And Utility Patterns
+
+The new tricks file collects common NumPy patterns that are easy to reuse in exercises and data work:
+
+- sorting and appending
+- concatenating and stacking arrays
+- unique values and set-style operations
+- expanding dimensions and cumulative sums
+- percentiles, histograms, correlation, and covariance
+- membership checks, flips, `put`, `delete`, and clipping
+
 ## Practice Question Themes
 
 The practice sheet is organized around the same NumPy skills, but in problem form.
@@ -130,6 +142,14 @@ The practice sheet is organized around the same NumPy skills, but in problem for
 - mean filtering on an image
 - sigmoid and loss-style calculations
 
+### Array Tricks And Reshaping
+
+- sorting, stacking, and splitting arrays
+- unique values and set operations
+- expanding dimensions for model inputs
+- cumulative sums and clipping values
+- histogram and summary-style exploration
+
 ## Cheat-Sheet References
 
 The PDF files in this folder are quick-reference NumPy cheat sheets. They reinforce the same core material used throughout the lectures:
@@ -160,4 +180,4 @@ If you want the fastest progress, use this loop:
 
 ## Current Focus
 
-The currently open lesson, `lec8.py`, is about filtering arrays with boolean masks, `np.where`, and `NaN` handling.
+The current focus is `lec10.py` and `tricks.py`, which extend the course into fancy indexing, stacking and splitting, and a broader set of reusable NumPy utilities.
