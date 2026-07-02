@@ -9,12 +9,13 @@ print(ages)
 teenagesr = ages[ages <= 19]
 print(teenagesr)
 
-adults = ages[(ages >= 18 ) & (ages <= 65)]
+adults = ages[(ages >= 18 ) & (ages <= 65)] # Always use bitwise operators (&, |) instead of logical operators (and, or) when working with NumPy arrays.
 print(adults)
 adults = ages[(ages >= 18 ) | (ages <= 65)]
 print(adults)
 evens = ages[(ages % 2 == 0)]
 print(evens)
+print(ages[~(ages % 7 == 0)]) # For negation, use the tilde (~) operator. It is equivalent to the not operator in Python.
 
 adults = np.where(ages >= 18, ages, 0)
 print(adults)

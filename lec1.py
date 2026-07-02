@@ -8,6 +8,9 @@ data = np.array([[[1, 2, 3], [4, 5, 6], [7, 8, 9]],
                  [[21, 22, 23], [24, 25 ,26], [27, 28, 29]]])
 print(data)
 
+data = np.arange(24).reshape(6, 4)
+print(data)
+
 data_type = data.dtype
 print(data_type)
 

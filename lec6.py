@@ -20,4 +20,16 @@ print(data_shape2)
 dat_broadcasted = (data1 * data2)
 print(dat_broadcasted)
 
+# Example of broadcasting with 2D arrays
 
+a = np.arange(6).reshape(2, 3)
+print(a)
+b = np.arange(3).reshape(4, 3)
+print(b)
+c = a + b
+print(c)
+
+
+# Condition of Broadcasting: The dimensions of the two arrays must be compatible. Two dimensions 
+# are compatible when they are equal, or one of them is 1. If the arrays do not have the same number 
+# of dimensions, the shape of the smaller-dimensional array is padded with ones on its leading (left) side.
